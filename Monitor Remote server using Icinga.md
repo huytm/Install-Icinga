@@ -109,7 +109,9 @@ ssh root@192.168.1.222
 # make install-xinetd
 ```
 - Cấu hình nrpe service
+- 
 `# vim /etc/xinetd.d/nrpe`
+
 --> Line 15: only_from = 127.0.0.1 localhost 192.168.1.220 (icinga_server)
 
 `# vim /etc/services`
