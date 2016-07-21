@@ -4,6 +4,6 @@
 
 - Trong ghi chép này, mình sẽ chia làm hai phần:
 <ul>
- <li>[Phần một: Cài đặt máy chủ Icinga](https://github.com)</li>
+ <li>[Phần một: Cài đặt máy chủ Icinga](https://github.com/huytm/Install-Icinga/blob/master/Install-Icinga.md)</li>
  <li>[Phần hai: Monitor một số thông số cơ bản trên các máy chủ từ xa](https://github.com)</li>
 </ul>
