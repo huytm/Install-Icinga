@@ -115,8 +115,10 @@ ssh root@192.168.1.222
 --> Line 15: only_from = 127.0.0.1 localhost 192.168.1.220 (icinga_server)
 
 `# vim /etc/services`
+
 --> Add dòng sau vào cuối file
-**nrpe 5666/tcp NRPE**
+
+`nrpe 5666/tcp #NRPE`
 
 ```sh
 # service xinetd restart
@@ -126,11 +128,11 @@ ssh root@192.168.1.222
 
 `# netstat -at | grep nrpe`
 
-tcp 	0 	0 	*:nrpe 	*:* 	LISTEN
+`tcp 	0 	0 	*:nrpe 	*:* 	LISTEN`
 
 `# /usr/local/nagios/libexec/check_nrpe -H localhost`
 
-NRPE v2.15
+`NRPE v2.15`
 
 ###5. Cấu hình nrpe giám sát hệ thống
 
@@ -144,7 +146,6 @@ command[check_load]=/usr/local/nagios/libexec/check_load -w 15,10,5 -c 30,25,20
 command[check_disk]=/usr/local/nagios/libexec/check_disk -w 20% -c 10% -p /dev/mapper/vg_huycentos2-lv_root ; <your partition you want to monitor>
 command[check_zombie_procs]=/usr/local/nagios/libexec/check_procs -w 5 -c 10 -s Z
 command[check_total_procs]=/usr/local/nagios/libexec/check_procs -w 150 -c 200
-command[check_memory]=/usr/local/nagios/libexec/check_mem.sh -w 80 -c 90
 ```
 
 `#service xinetd restart`
@@ -161,11 +162,11 @@ ssh root@192.168.1.220
 
 `# /usr/lib/nagios/plugins/check_nrpe -H 192.168.1.221`
 
-NRPE v2.15
+`NRPE v2.15`
 
 `# /usr/lib/nagios/plugins/check_nrpe -H 192.168.1.222`
 
-NRPE v2.15
+`NRPE v2.15`
 
 
 ###3. Tạo file cấu hình với cho từng remote server
