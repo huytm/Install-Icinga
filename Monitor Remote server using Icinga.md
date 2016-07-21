@@ -7,6 +7,7 @@ Về cơ chế hoạt động mình có thể giải thích như sau:
 <img src=https://openmoz.files.wordpress.com/2015/01/screenshot-from-2015-01-06-192215.png>
 
 Đây là hình ảnh kinh điển trong quá trình sử dụng nrpe để thực hiện việc monitor remote server. Bản chất của Icinga là Nagios core. Quá trình monitor diễn ra như sau:
+
     - Remote server sẽ sử dụng các plugin của nagios tiến hành check hệ thống
     - Các thông số check đc sẽ giao tiếp thông qua nrpe với máy chủ Icinga (Quá trình này đc bảo vệ bằng SSL - bắt buộc)
     - Các thông tin nhận được từ nrpe sẽ được máy chủ Icinga phân tích và hiển thị lên cgi (web interface)
