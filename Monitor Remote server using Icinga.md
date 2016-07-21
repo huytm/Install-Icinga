@@ -47,6 +47,7 @@ Với nội dung [tại đây](https://github.com/huytm/Install-Icinga/blob/mast
 ###4. Restart nrpe
 
 `# /etc/init.d/nagios-nrpe-server restart`
+
 `# netstat -antup | grep 5666`
 
 ```sh
