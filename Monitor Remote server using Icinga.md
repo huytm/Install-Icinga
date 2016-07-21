@@ -130,6 +130,7 @@ tcp 	0 	0 	*:nrpe 	*:* 	LISTEN
 NRPE v2.15
 
 ###5. Cấu hình nrpe giám sát hệ thống
+
 `# vim /usr/local/nagios/etc/nrpe.cfg`
 
 --> comment lại dòng từ 219 đến 223 và add các dòng sau
@@ -160,6 +161,7 @@ ssh root@192.168.1.220
 NRPE v2.15
 
 `# /usr/lib/nagios/plugins/check_nrpe -H 192.168.1.222`
+
 NRPE v2.15
 
 
@@ -301,5 +303,7 @@ define service	{
 
 Khởi động lại icinga	
 
-`# /usr/sbin/icinga -v /etc/icinga/icinga.cfg`
-`# /etc/init.d/icinga reload`
+```sh
+# /usr/sbin/icinga -v /etc/icinga/icinga.cfg
+# /etc/init.d/icinga reload
+```
