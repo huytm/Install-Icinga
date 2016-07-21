@@ -14,26 +14,26 @@ Trong ghi chép này mình sử dụng toàn bộ user **root** để cài đặ
 
 `ssh root@192.168.1.220`
 
-1. Fix lỗi add repuo và updata package on Ubuntu 
+###1. Fix lỗi add repuo và updata package on Ubuntu 
 
 ```sh
 # cd /var/cache/debconf
 # mv *.dat /tmp/
 ```
 
-2. Add repo
+###2. Add repo
 
 `# add-apt-repository ppa:formorer/icinga`
 
 --> Press [Enter]
 
-3. Update respositories and system packages
+###3. Update respositories and system packages
 
 `# apt-get update && apt-get upgrade -y`
 
 **Note**: Trong quá trình update nếu bạn gặp *"Configuring grub-pc"* thì lựa chọn primary partition, phân vùng mà bạn cài đặt hệ điều hành
 
-4. Install mysql
+###4. Install mysql
 
 Bạn cần phải cài đặt mysql server trước khi cài đặt Icinga để tránh phát sinh lỗi trong quá trình cài đặt
 
@@ -42,7 +42,7 @@ Bạn cần phải cài đặt mysql server trước khi cài đặt Icinga đ�
 - --> Nhập password cho root user ở bước "Configuring mysql-server-5.5"
 - --> Nhập lại password
 
-5. Install Icinga
+###5. Install Icinga
 
 `# apt-get install icinga icinga-doc icinga-idoutils -y`
 
@@ -60,7 +60,7 @@ Bạn cần phải cài đặt mysql server trước khi cài đặt Icinga đ�
 <li>At Configuring icinga-idoutils : 	-->	Comfirm lại password                                                                                 </li>
 </ul>
 
-6. Config Icinga Server
+###6. Config Icinga Server
 
 - Enable ido2db daemon start cùng với hệ thống.
 
@@ -79,11 +79,11 @@ Bạn cần phải cài đặt mysql server trước khi cài đặt Icinga đ�
 # service icinga restart
 ```
 
-7. Truy cập vào Icinga
+###7. Truy cập vào Icinga
 
 Truy cập vào địa chỉ http://192.168.1.220/icinga với **username/password** **icingaadmin/<password bạn đặt ở bước 5>**
 
-<img src=http://prntscr.com/bvjfym>
+<img src=http://i.imgur.com/GHHVGYT.png>
 
 Enjoy :)
 
