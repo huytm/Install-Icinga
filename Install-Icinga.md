@@ -72,6 +72,13 @@ Bạn cần phải cài đặt mysql server trước khi cài đặt Icinga đ�
 
 `# cp /usr/share/doc/icinga-idoutils/examples/idoutils.cfg-sample /etc/icinga/modules/idoutils.cfg`
 
+- Thay đổi contact để nhận email cảnh báo
+
+`vim /etc/icinga/objects/contacts_icinga.cfg`
+          
+--> Thay đổi *root@localhost* bằng email của bạn ví dụ huytm@gmail.com
+
+
 - Restart icinga service.
 
 ```sh
