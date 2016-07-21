@@ -294,13 +294,6 @@ define service	{
 		use                    generic-service
 		host_name              Centos-server
 		service_description    Memory
-		check_command          check_nrpe_1arg!check_memory
-}
-
-define service	{
-		use                    generic-service
-		host_name              Centos-server
-		service_description    Memory
 		check_command          check_ping!100.0,20%!500.0,60%
 }	
 ```	
@@ -310,4 +303,5 @@ Khởi động lại icinga
 ```sh
 # /usr/sbin/icinga -v /etc/icinga/icinga.cfg
 # /etc/init.d/icinga reload
+# /etc/init.d/icinga restart
 ```
