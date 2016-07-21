@@ -305,3 +305,8 @@ Khởi động lại icinga
 # /etc/init.d/icinga reload
 # /etc/init.d/icinga restart
 ```
+
+<img src=http://i.imgur.com/iDiocLs.jpg>
+
+Have fun :)
+
