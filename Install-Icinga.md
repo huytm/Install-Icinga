@@ -81,7 +81,7 @@ Bạn cần phải cài đặt mysql server trước khi cài đặt Icinga đ�
 
 ###7. Truy cập vào Icinga
 
-Truy cập vào địa chỉ http://192.168.1.220/icinga với **username/password** **icingaadmin/<password bạn đặt ở bước 5>**
+Truy cập vào địa chỉ http://192.168.1.220/icinga với username/password **icingaadmin/password bạn đặt ở bước 5**
 
 <img src=http://i.imgur.com/GHHVGYT.png>
 
